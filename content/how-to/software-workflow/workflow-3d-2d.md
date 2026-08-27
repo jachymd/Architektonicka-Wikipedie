@@ -72,17 +72,16 @@ Tags (dříve "Layers") řídí, co je vidět a co je vypnuté — během modelo
 
 | Tag folder | Příklad Tags uvnitř | Doporučená barva |
 |---|---|---|
-| *(k doplnění)* | *(k doplnění)* | Okrová |
-| *(k doplnění)* | *(k doplnění)* | Šedá |
-| *(k doplnění)* | *(k doplnění)* | Cihlově červená |
-| *(k doplnění)* | *(k doplnění)* | Nebesky modrá |
-| *(k doplnění)* | *(k doplnění)* | Písková |
-| *(k doplnění)* | *(k doplnění)* | Petrolejová |
-| *(k doplnění)* | *(k doplnění)* | Jantarová |
-| *(k doplnění)* | *(k doplnění)* | Purpurová |
-| *(k doplnění)* | *(k doplnění)* | Světle šedá |
+| 00_TEREN | 00_TEREN_Teren, 00_TEREN_SadoveUpravy, 00_TEREN_Kontext | Okrová |
+| 01_KONSTRUKCE_NOSNE | 01_KONSTRUKCE_NOSNE_Zaklady, 01_KONSTRUKCE_NOSNE_Sloupy, 01_KONSTRUKCE_NOSNE_StropniDeska, 01_KONSTRUKCE_NOSNE_KonstrukceStrechy | Šedá |
+| 02_KONSTRUKCE | 02_KONSTRUKCE_ObvodovaStena, 02_KONSTRUKCE_Izolace, 02_KONSTRUKCE_FasadniObklad, 02_KONSTRUKCE_Krytina | Cihlově červená |
+| 03_OTVORY | 03_OTVORY_Okna, 03_OTVORY_Dvere, 03_OTVORY_StresniOkna | Nebesky modrá |
+| 04_INTERIER | 04_INTERIER_Pricky, 04_INTERIER_VnitrniDvere, 04_INTERIER_Podlahy, 04_INTERIER_Podhledy | Písková |
+| 05_VYBAVENI | 05_VYBAVENI_Nabytek, 05_VYBAVENI_Zarizovaci, 05_VYBAVENI_Spotrebice | Petrolejová |
+| 07_DOKUMENTACE | 07_DOKUMENTACE_SectionPlanes, 07_DOKUMENTACE_Kotovani, 07_DOKUMENTACE_RastrOs | Purpurová |
+| 08_PODKLADY | 08_PODKLADY_CadPodklad, 08_PODKLADY_HmotovaStudie, 08_PODKLADY_Skica | Světle šedá |
 
-*Poznámka: sloupce "Tag folder" a "Příklad Tags uvnitř" jsou v aktuální verzi manuálu prázdné (zůstaly jen barvy) — pravděpodobně se čeká na sladění s novými kódy z A.2/A.3. Doplnit, až bude jasné.*
+*Poznámka: názvy tagů uvnitř jednotlivých folderů jsou navržené podle obsahu tabulky A.2 a konvence z A.3 — ke schválení týmem, ne finální rozhodnutí. Barva Jantarová (dřív MEP) zůstává volná, protože skupina 06_MEP byla z A.2 odebrána; lze ji znovu přiřadit, pokud se MEP jako vlastní kategorie do hierarchie vrátí.*
 
 > **Zlaté pravidlo:** Tags přiřazujte pouze skupinám a komponentám — nikdy syrové, neseskupené geometrii. "Untagged" nechte jako tag, na kterém začíná každá nová editace; pokud kreslíte novou geometrii, nejdřív ji seskupte a teprve pak otagujte skupinu. Přímé tagování jednotlivých hran je nejčastější příčinou toho, že tag spolehlivě neskryje vše, co má.
 
@@ -136,7 +135,27 @@ Tento postup ruční čištění zcela neodstraní, ale zabrání tomu, aby se t
 
 ### C.3 Export řezů a pohledů ze SketchUp
 
-- B.2 Curic toCAD - velmi přínosný plugin pro export z modelu do CADu
+Pro export řezů a pohledů doporučujeme plugin **[Curic toCAD](https://curic.gumroad.com/l/curic_tocad)** — řeší přímo dvě věci, které jsou u ručního exportu z C.2 nejotravnější: mapování Tags na CAD vrstvy a opakovaný export více scén najednou.
+
+**Co Curic toCAD řeší:**
+
+- **Tags → Layers mapování** — jednou nastavíte, na jakou vrstvu (včetně AutoCAD color indexu, typu a tloušťky čáry) se má který Tag z A.5 při exportu převést. Odpadá ruční dohledávání a přemapovávání vrstev v BricsCAD po každé nové verzi SketchUp, které řešila stará C.3.
+- **Export Sets** — pro každou scénu (viz A.6) lze uložit vlastní sadu exportních nastavení, takže se nastavuje jednou, ne při každém exportu znovu.
+- **Dávkový export více scén najednou** — jedním příkazem exportuje všechny nastavené scény do samostatných souborů, místo ručního File ▸ Export pro každý výkres zvlášť.
+- **Souvislé polylinie místo segmentů** a **vlastní souřadný systém** při exportu — čistší DXF/DWG na vstupu do BricsCAD.
+- **Šrafy pro řezné hrany** (vyžaduje doplněk Curic Section) — obdoba potřeby zmíněné jinde v manuálu, řeší automatické vyplnění řezných ploch místo ručního poché v BricsCAD.
+
+**Instalace:** Stáhnout `.rbz` soubor z odkazu výše a nainstalovat přes Window ▸ Extension Manager ▸ Install Extension v SketchUp. Vyžaduje SketchUp 2021+ (macOS) nebo 2023+ (Windows). Cena 35 USD (v době psaní tohoto záznamu), základní funkce dostupné zdarma.
+
+**Doporučený postup nasazení:**
+
+1. Nainstalovat a vyzkoušet na jednom rozpracovaném projektu, ne rovnou nasadit plošně.
+2. Nastavit Tags → Layers mapování jednou podle tabulky v A.5 (až bude schválená týmem) a uložit jako výchozí šablonu pro nové projekty.
+3. Pro každou scénu z A.6 vytvořit odpovídající Export Set.
+4. Otestovat dávkový export a porovnat výsledný DXF/DWG s dosavadním ručním postupem z C.2 — hlavně mapování vrstev a čistotu šraf.
+5. Pokud se osvědčí, zapsat jako doporučený standardní nástroj pro export v této sekci (nahradit "k rozpracování" stav).
+
+*(zdroj informací o pluginu: stránka produktu [curic.gumroad.com/l/curic_tocad](https://curic.gumroad.com/l/curic_tocad))*
 
 ### C.4 Pojmenování souborů a verzí
 
