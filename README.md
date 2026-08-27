@@ -31,8 +31,10 @@ hugo server
 
 ## Nasazení
 
-- **Testovací provoz:** GitHub Pages, build přes `.github/workflows/hugo.yml` (spustí se automaticky při push do `main`). V nastavení repozitáře je potřeba v **Settings → Pages** nastavit zdroj na "GitHub Actions" a v `hugo.toml` upravit `baseURL` na skutečnou adresu (`https://<uzivatel>.github.io/<repo>/`).
+- **Testovací provoz:** GitHub Pages, build přes `.github/workflows/hugo.yml` (spustí se automaticky při push do `main`). GitHub Pages nejde spustit z privátního repozitáře na GitHub Free plánu — repozitář je proto (dočasně, pro prototypovou fázi) nastavený jako **public**. V nastavení repozitáře je potřeba v **Settings → Pages** nastavit zdroj na "GitHub Actions" (`baseURL` v `hugo.toml` už je nastavená na `https://jachymd.github.io/Architektonicka-Wikipedie/`).
 - **Ostrý provoz:** doména kosnar.eu / hosting Weglobe — nahrát obsah vygenerované složky `public/` (výstup `hugo --minify`) přes FTP/správu hostingu. Řešení limitu úložiště (obrázky mimo repozitář/hosting) je popsáno v projektovém dokumentu.
+
+> Poznámka: dokud je repozitář public, je hotový web i zdrojový obsah viditelný komukoli na internetu (i když na něj nikdo neodkazuje). Až se bude nahrávat reálný interní obsah kanceláře, zvážit buď přepnutí zpět na privátní řešení (Cloudflare Pages + Access), nebo rovnou přesun na kosnar.eu s vlastním omezením přístupu.
 
 ## Poznámka k obrázkům
 
