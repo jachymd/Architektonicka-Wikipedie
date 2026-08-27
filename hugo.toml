@@ -1,7 +1,6 @@
 baseURL = "https://jachymd.github.io/Architektonicka-Wikipedie/"
 languageCode = "cs-cz"
 title = "Architektonická wikipedie — Huť architektury"
-theme = ""
 defaultContentLanguage = "cs"
 
 # Tagy fungují jako Hugo "taxonomie" -> automaticky vzniká rejstřík
