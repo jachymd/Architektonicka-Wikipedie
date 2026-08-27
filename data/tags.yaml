@@ -17,3 +17,29 @@ udrzitelnost:
   popis: "Ekologické a udržitelné aspekty stavby."
 sprava-webu:
   popis: "Návody týkající se správy a aktualizace tohoto webu."
+sketchup:
+  popis: "Tvorba a struktura 3D modelu ve SketchUp."
+bricscad:
+  popis: "2D projektová dokumentace v BricsCAD (výkresy, řezy, pohledy)."
+twinmotion:
+  popis: "Real-time rendering a vizualizace v Twinmotion."
+bim:
+  popis: "BIM / IFC workflow a asociativní 2D dokumentace."
+rozhledna:
+  popis: "Rozhledny a veřejné vyhlídkové věže."
+rodinny-dum:
+  popis: "Rodinné domy a bydlení."
+vystava-expozice:
+  popis: "Výstavní pavilony a expozice."
+sakralni-stavba:
+  popis: "Kaple, kostely a další sakrální stavby."
+vez:
+  popis: "Věže mimo veřejné rozhledny — pamětní, technické, konstrukční."
+affinity:
+  popis: "Affinity Photo/Designer/Publisher — postprodukce a sazba."
+xref:
+  popis: "Práce s externími referencemi (Xref) mezi SketchUp a BricsCAD."
+texturovani:
+  popis: "Texturování a práce s materiály."
+pojmenovani-souboru:
+  popis: "Konvence pojmenování souborů a verzí."

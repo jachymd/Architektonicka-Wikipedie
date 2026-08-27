@@ -1,6 +1,14 @@
 {{ define "main" }}
 <article>
   <h1>{{ .Title }}</h1>
+
+  {{ if .TableOfContents }}
+  <nav class="toc">
+    <p class="toc-label">Obsah</p>
+    {{ .TableOfContents }}
+  </nav>
+  {{ end }}
+
   <dl class="meta-grid">
     {{ with .Params.autor }}<dt>Autor</dt><dd>{{ . }}</dd>{{ end }}
     {{ with .Params.rok }}<dt>Rok</dt><dd>{{ . }}</dd>{{ end }}
