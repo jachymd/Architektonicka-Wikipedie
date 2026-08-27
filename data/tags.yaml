@@ -1,0 +1,19 @@
+# Řízený seznam tagů napříč HOW-TO / INSPIRACE / PROJEKTY.
+# Nový tag sem nejdřív přidej (s krátkým popisem), teprve pak ho použij v záznamu.
+# Účel: aby propojení přes tagy fungovalo spolehlivě a "nerozjelo se"
+# do desítek variant stejného slova (drevo / drevene / drevostavba...).
+
+drevostavba:
+  popis: "Stavby a konstrukce z dřeva jako hlavního materiálu."
+fasada:
+  popis: "Řešení fasád a obvodového pláště."
+rozpocet:
+  popis: "Ekonomická kalkulace, rozpočtování."
+stavebni-povoleni:
+  popis: "Legislativa a proces stavebního povolení / DSP."
+detail-konstrukce:
+  popis: "Konstrukční detaily a jejich řešení."
+udrzitelnost:
+  popis: "Ekologické a udržitelné aspekty stavby."
+sprava-webu:
+  popis: "Návody týkající se správy a aktualizace tohoto webu."

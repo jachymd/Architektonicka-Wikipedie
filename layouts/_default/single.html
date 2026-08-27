@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <dl class="meta-grid">
+    {{ with .Params.autor }}<dt>Autor</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with .Params.rok }}<dt>Rok</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with .Params.lokace }}<dt>Lokace</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with .Params.typ }}<dt>Typ</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with .Params.faze }}<dt>Fáze</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with .Params.role }}<dt>Role kanceláře</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with .Params.zdroj_informace }}<dt>Zdroj informace</dt><dd>{{ . }}</dd>{{ end }}
+  </dl>
+
+  {{ if .Params.tagy }}
+  <p class="tags">
+    {{ range .Params.tagy }}<a class="tag" href="{{ printf "tagy/%s/" . | relURL }}">#{{ . }}</a>{{ end }}
+  </p>
+  {{ end }}
+
+  <div class="content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Params.obrazky }}
+  <div class="images">
+    {{ range .Params.obrazky }}<img src="{{ . }}" loading="lazy" alt="">{{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,19 @@
+baseURL = "https://REPLACE-ME.github.io/architektonicka-wikipedie/"
+languageCode = "cs-cz"
+title = "Architektonická wikipedie — Huť architektury"
+theme = ""
+defaultContentLanguage = "cs"
+
+# Tagy fungují jako Hugo "taxonomie" -> automaticky vzniká rejstřík
+# na /tagy/<tag>/ se všemi záznamy napříč HOW-TO / INSPIRACE / PROJEKTY.
+[taxonomies]
+  tag = "tagy"
+
+[params]
+  popis = "Vnitřní nástroj pro kancelář Huť architektury pro živé a dynamické sdílení informací, nástrojů a archivaci inspirací."
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
