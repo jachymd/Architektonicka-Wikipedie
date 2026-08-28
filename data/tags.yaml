@@ -43,3 +43,7 @@ texturovani:
   popis: "Texturování a práce s materiály."
 pojmenovani-souboru:
   popis: "Konvence pojmenování souborů a verzí."
+sketchup-pluginy:
+  popis: "Rozšiřující pluginy pro SketchUp (Profile Builder a další) — přehled funkcí a postup použití, jednotná šablona pro víc pluginů."
+profile-builder:
+  popis: "Plugin Profile Builder pro SketchUp — profily, sestavy (assemblies), spany a jejich export."
