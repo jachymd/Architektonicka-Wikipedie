@@ -71,4 +71,5 @@ Zdrojové video navazuje na dřívější, začátečnický díl seriálu o Prof
 
 ## Zdroj
 
-Přepis videa z YouTube kanálu **The SketchUp Essentials** (autor Justin), díl ze seriálu o Profile Builderu věnovaný tvorbě smart assemblies — přepis dodal uživatel, přímý odkaz na video zatím k dispozici není (doplnit, pokud bude potřeba zpětně dohledat).
+Přepis videa z YouTube kanálu **The SketchUp Essentials** (autor Justin), díl ze seriálu o Profile Builderu věnovaný tvorbě smart assemblies:
+https://www.youtube.com/watch?v=I8Ap-O3Idsg
